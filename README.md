@@ -1,7 +1,7 @@
 # Mi producto
 
-> **Alumno:** cambia este título por el nombre de tu producto y esta línea por una frase que lo explique.
-> Proyecto n.º __ del catálogo · Sitio de referencia: __ · [PRD](docs/PRD.md) · URL publicada: __
+> **Alumno:** Rutina Gimnasio: Aplicación web de seguimiento de entrenamientos de fuerza con rutinas personalizadas, gráficos de progreso y temporizador de descanso con vibración..
+> Proyecto n.º 17 del catálogo · Sitio de referencia:[Hevy](https://www.hevyapp.com/) · [PRD](docs/PRD.md) · URL publicada: pendiente
 
 Plantilla del proyecto de **Lenguaje de Programación · 2026**.
 La guía completa de la actividad está en el repositorio del curso:
