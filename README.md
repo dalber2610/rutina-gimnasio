@@ -1,7 +1,7 @@
 # Mi producto
 
 > **Alumno:** Rutina Gimnasio: Aplicación web de seguimiento de entrenamientos de fuerza con rutinas personalizadas, gráficos de progreso y temporizador de descanso con vibración..
-> Proyecto n.º 17 del catálogo · Sitio de referencia:[Hevy](https://www.hevyapp.com/) · [PRD](docs/PRD.md) · URL publicada: pendiente
+> Proyecto n.º 17 del catálogo · Sitio de referencia:[Hevy](https://www.hevyapp.com/) · [PRD](docs/PRD.md) · URL publicada: en espera
 
 Plantilla del proyecto de **Lenguaje de Programación · 2026**.
 La guía completa de la actividad está en el repositorio del curso:
