@@ -6,10 +6,10 @@ está organizado el proyecto y qué reglas sigue.
 
 ## Contexto
 
-- Proyecto académico de **Lenguaje de Programación** (5.º semestre, Ingeniería de Sistemas).
+- Proyecto académico de **Lenguaje de Programación** (6.º semestre, Ingeniería de Sistemas).
 - La persona que programa es **estudiante**: está aprendiendo. Tu rol es enseñar y revisar, no
   resolverle la materia.
-- Producto: <!-- el alumno describe aquí su producto en 2 líneas -->
+- Producto: **Rutina Gimnasio** es una aplicación web de seguimiento de entrenamientos de fuerza. Permite a los usuarios crear y gestionar rutinas de gimnasio, registrar sus sesiones (series, repeticiones y pesos), visualizar su evolución mediante **gráficos de progreso** y controlar sus descansos con un **temporizador integrado con alerta por vibración**.
 
 ## Reglas obligatorias
 
@@ -29,6 +29,10 @@ está organizado el proyecto y qué reglas sigue.
    con su `*.model.ts`, `*.repository.ts`, `*.routes.ts`, `*.api.ts` y `*.view.ts`. Nunca crees carpetas
    por capa técnica (`controllers`, `models`, `services`, `routes`, `utils`…). `src/shared` no importa
    funcionalidades; las funcionalidades no importan `src/app`. Ver `docs/arquitectura.md`.
+9. **Idioma:** La interfaz de usuario, la documentación del producto y los mensajes de negocio van en **español**. El código (variables, funciones, tablas, commits técnicos) sigue convenciones consistentes del proyecto.
+10. **Calidad:** Mantener tipado estricto en TypeScript y respetar la arquitectura modular dentro de `src/`.
+11. **Flujo de trabajo:** Nunca hacer cambios directos a `main`; todo cambio debe pasar por una rama y un Pull Request con la CI en verde.
+12. **Foco en el producto:** Priorizar la rapidez de registro durante el entrenamiento (menos clics, respuesta inmediata y soporte móvil para el temporizador con vibración).
 
 ## Convenciones
 
@@ -52,6 +56,19 @@ db/                    migraciones SQL, semillas y ejecutor de migraciones
 tests/                 unit · integration · e2e (architecture.test.ts revisa la estructura)
 docs/                  PRD, arquitectura, decisiones (ADR), ingeniería inversa, seguridad
 ```
+
+## Funcionalidades Principales (MVP)
+- **Gestión de rutinas:** Creación, edición y organización de rutinas personalizadas sin límites artificiales.
+- **Registro de entrenamiento en vivo:** Seguimiento de ejercicios, series, peso, repeticiones y estado de completado.
+- **Temporizador de descanso con vibración:** Cuenta regresiva automática o manual entre series con notificación háptica (vibración) al finalizar.
+- **Gráficos de progreso:** Visualización histórica de volumen, peso máximo (1RM estimado) y evolución por ejercicio.
+- **Catálogo de ejercicios:** Listado estructurado por grupo muscular y equipo.
+
+## Stack Tecnológico y Entorno Local
+- **Runtime / Lenguaje:** Node.js + TypeScript.
+- **Base de datos:** PostgreSQL (gestionado localmente con Docker Compose y cliente `pg`).
+- **Control de versiones y CI:** GitHub (flujo basado en ramas, Pull Requests y CI en verde).
+
 
 ## Comandos
 
