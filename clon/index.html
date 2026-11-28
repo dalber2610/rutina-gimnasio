@@ -1,19 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recreación · Inicio</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <header>
-      <!-- Tu marca, no la del sitio original -->
-    </header>
-    <main>
-      <!-- Pantalla 1 de 3 -->
-    </main>
-    <footer></footer>
-    <script src="./main.js"></script>
-  </body>
-</html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Rutina Gimnasio: registra tus entrenamientos de fuerza, controla tus descansos con vibración y visualiza tu progreso." />
+  <title>Rutina Gimnasio · Entrenamiento de Fuerza</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+    <!-- Navegación principal (lateral en 1280px, inferior en 375px) -->
+    <aside class="sidebar" aria-label="Navegación principal">
+      <div class="brand">
+        <svg class="brand-logo" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#2563EB" />
+          <path d="M8 12v8M11 10v12M21 10v12M24 12v8M11 16h10" stroke="#FFFFFF" stroke-width="2.4"
+            stroke-linecap="round" />
+        </svg>
+        <span class="brand-name">Rutina Gimnasio</span>
+      </div>
+
+      <nav class="nav-links" role="tablist" aria-label="Pantallas de la aplicación">
+        <button class="nav-btn is-active" role="tab" aria-selected="true" data-view="routines">
+          <span>Rutinas</span>
+        </button>
+        <button class="nav-btn" role="tab" aria-selected="false" data-view="workout">
+          <span>Entrenar</span>
+        </button>
+        <button class="nav-btn" role="tab" aria-selected="false" data-view="progress">
+          <span>Progreso</span>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <!-- PANTALLA 1: RUTINAS -->
+      <section id="view-routines" class="view is-active" aria-labelledby="title-routines">
+        <header class="view-header">
+          <div>
+            <h1 id="title-routines">Mis Rutinas</h1>
+            <p class="subtitle">Sin límites artificiales · Selecciona una rutina para entrenar</p>
+          </div>
+          <button class="btn btn-primary" id="btn-quick-start">Iniciar libre</button>
+        </header>
+
+        <div class="routines-grid" id="routines-list">
+          <article class="card routine-card">
+            <div class="card-head">
+              <h2>Empuje (Pecho, Hombro, Tríceps)</h2>
+              <span class="badge">4 ejercicios</span>
+            </div>
+            <p class="muted">Press banca plano, Press inclinado mancuernas, Elevaciones laterales, Fondos.</p>
+            <button class="btn btn-primary btn-full" data-start-routine="Empuje (Pecho, Hombro, Tríceps)">
+              Iniciar rutina
+            </button>
+          </article>
+
+          <article class="card routine-card">
+            <div class="card-head">
+              <h2>Tirón (Espalda y Bíceps)</h2>
+              <span class="badge">4 ejercicios</span>
+            </div>
+            <p class="muted">Dominadas lastradas, Remo con barra, Jalón al pecho, Curl con barra Z.</p>
+            <button class="btn btn-primary btn-full" data-start-routine="Tirón (Espalda y Bíceps)">
+              Iniciar rutina
+            </button>
+          </article>
+
+          <article class="card routine-card">
+            <div class="card-head">
+              <h2>Pierna Completa</h2>
+              <span class="badge">5 ejercicios</span>
+            </div>
+            <p class="muted">Sentadilla libre, Peso muerto rumano, Prensa 45°, Curl femoral, Gemelos.</p>
+            <button class="btn btn-primary btn-full" data-start-routine="Pierna Completa">
+              Iniciar rutina
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <!-- PANTALLA 2: ENTRENAMIENTO EN VIVO + TEMPORIZADOR -->
+      <section id="view-workout" class="view" aria-labelledby="title-workout" hidden>
+        <header class="view-header">
+          <div>
+            <h1 id="title-workout">Entrenamiento en vivo</h1>
+            <p class="subtitle" id="active-routine-name">Empuje (Pecho, Hombro, Tríceps)</p>
+          </div>
+          <button class="btn btn-success" id="btn-finish-workout">Finalizar</button>
+        </header>
+
+        <div class="stats-bar">
+          <div class="stat-box">
+            <span class="stat-label">Volumen</span>
+            <strong id="live-volume">0 kg</strong>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Series</span>
+            <strong id="live-sets">0 / 3</strong>
+          </div>
+        </div>
+
+        <section class="card timer-card" aria-label="Temporizador de descanso">
+          <div class="timer-info">
+            <span class="timer-label">Descanso</span>
+            <strong class="timer-display" id="timer-display" aria-live="ss
