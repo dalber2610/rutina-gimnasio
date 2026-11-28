@@ -39,10 +39,11 @@
 
 | Métrica | Sitio original | Mi versión |
 | --- | --- | --- |
-| Rendimiento | 42 | *(se completa en H1.3)* |
-| Accesibilidad | 91 | *(se completa en H1.3)* |
-| Buenas prácticas | 77 | *(se completa en H1.3)* |
+| Rendimiento | 42 | **89** |
+| Accesibilidad | 91 | **100** |
+| Buenas prácticas | 77 | **92** |
 
+![Lighthouse versión propia](img/11-lighthouse-clon.png)
 ## 6. Hallazgos
 
 | # | Hallazgo | Captura |
@@ -60,6 +61,6 @@
 
 ## 7. Tres mejoras que hice en mi versión (H1.3)
 
-1. *(Se completa al finalizar H1.2 y H1.3: HTML semántico limpio sin div soup ni dependencias pesadas, subiendo Rendimiento a ≥ 95).*
-2. *(0 errores en consola, sin bloqueo CSP de `eval` ni cookies de rastreo de terceros, subiendo Buenas prácticas a ≥ 95).*
-3. *(Interfaz interactiva real desde la primera carga con temporizador con vibración y gráfico de progreso, manteniendo Accesibilidad ≥ 95).*
+1. **HTML semántico y cero dependencias pesadas (+47 en Rendimiento):** Se eliminó el exceso de `<div>` (*div soup*) de WordPress/Elementor y los 1,242 KiB de JS sin usar, construyendo las 3 vistas en HTML/CSS/JS puro con gráficos en `<svg>` nativo.
+2. **Accesibilidad perfecta (100/100):** Se corrigieron los problemas de estructura semántica (`<main>`, `<aside>`, `<nav>`, `<section>`, `<article>`), etiquetas `aria-*` en controles interactivos y contraste de color sobre fondo pizarra (`#0F172A`).
+3. **Buenas prácticas y privacidad (+15 puntos):** Se eliminaron las cookies de rastreo de terceros (GA4/Google), el gestor GDPR y el bloqueo de seguridad CSP por uso de `eval`, entregando una interfaz interactiva funcional desde la primera carga con temporizador basado en `Date.now()` y vibración háptica (`navigator.vibrate()`).
